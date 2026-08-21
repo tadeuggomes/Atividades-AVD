@@ -1,0 +1,44 @@
+1. Preparação dos Dados
+[ ] Ingestão & Origem: Confirmar a fonte oficial dos dados, o escopo temporal e realizar a importação do arquivo CSV.
+
+[ ] Higienização: Validar a estrutura das colunas, corrigir tipos de dados incompatíveis e tratar valores ausentes/nulos.
+
+[ ] Padronização: Normalizar categorias, formatar datas/horários e tratar inconsistências na variável idade.
+
+[ ] Enriquecimento: Identificar e tratar registros duplicados; criar variáveis temporais (ano, mês, dia da semana) e atributos analíticos derivados.
+
+2. Modelagem e Estruturação
+[ ] Granularidade: Garantir que cada linha represente estritamente um único chamado (1 linha = 1 chamado).
+
+[ ] Chave Primária: Criar e atribuir a identificação única id_chamado.
+
+[ ] Arquitetura Tabular: Manter os dados em formato tabular, segregando a camada de dados brutos da camada tratada.
+
+[ ] Agregações: Construir tabelas sumarizadas dedicadas para o cálculo de indicadores de desempenho (KPIs).
+
+3. Análise Exploratória
+[ ] Volumetria Temporal: Mapear a distribuição de ocorrências por ano e mês, identificando padrões de sazonalidade.
+
+[ ] Perfil Demográfico: Realizar a distribuição comparativa por gênero (homens × mulheres).
+
+[ ] Análise Geográfica: Mapear os municípios e bairros com maior volume de incidências.
+
+[ ] Categorização: Rankear os tipos e subtipos de chamados mais frequentes.
+
+[ ] Métricas de Desempenho: Avaliar a viabilidade técnica para o cálculo do tempo médio de atendimento.
+
+4. Validação & Qualidade de Dados
+[ ] Integridade Estrutural: Revalidar tipos de dados, completude do dataset, categorias e absência de duplicidades.
+
+[ ] Reconciliação: Conferir totais, percentuais e validar os resultados finais contra a base bruta original.
+
+[ ] Transparência: Documentar detalhadamente as limitações metodológicas encontradas nos dados.
+
+5. Automação & Implantação
+[ ] Rotina Recorrente: Configurar a execução mensal com detecção automática de novas versões do arquivo.
+
+[ ] Pipeline de Testes: Executar suíte de testes de qualidade antes da consolidação dos dados.
+
+[ ] Atualização Analítica: Automatizar o recálculo de indicadores e a atualização de painéis de visualização.
+
+[ ] Observabilidade: Manter histórico de execuções, gerar registros de logs e configurar alertas automáticos em caso de falha.
